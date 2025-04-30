@@ -1,10 +1,10 @@
-""" main.py"""
-# This file contains the main script that runs the game.
-# It integrates the game logic and the display functions.
-# It also handles user input, game modes (Player vs Player or Player vs Computer),
-# and the replay/quit system.
+""" main.py
+This file contains the main script that runs the game.
+It integrates the game logic and the display functions.
+It also handles user input, game modes (Player vs Player or Player vs Computer),
+and the replay/quit system.
+"""
 
-import sys
 import random
 from display import display_board
 from logic import check_draw, check_win, make_move, switch_player, create_empty_board, computer_move
@@ -205,10 +205,10 @@ def main() -> None:
 
                 current_player = "computer" if current_player == "human" else "human"
 
-            play_again = input("\n🔁 Do you want to play again? (y/n): ").strip().lower()
+            play_again = input("\n🔁 Do you want to play again? (y/any key to exit): ").strip().lower()
             if play_again != "y":
                 print("\nThanks for playing! Goodbye! 👋")
-                sys.exit() # This stops the entire program immediately
+                break   # This stops the entire program immediately 
             current_player = "human" if human_symbol == "X" else "computer"
 
 if __name__ == "__main__":
