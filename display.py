@@ -39,7 +39,7 @@ def display_board(game_board: list[list[str]]) -> None:
 if __name__ == "__main__":
     board : list = [
             ["X", "X", " "],
-            ["X", "O", "O"],
+            [" ", "O", "O"],
             [" ", "O", "X"]
         ]
 
